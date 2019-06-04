@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Animation Player</title>
+</head>
+<body>
+  <header class="header">
+    <a class="header__logo" href="#">Animation-player</a>
+  </header>
+  <main class="palette">
+    <div class="palette__menu menu">
+      <ul class="menu__tool-bar tool-bar">
+        <li class="tool-bar__item">
+          <button class="tool-bar__button tool-bar__button--fill" id="fill"></button>
+        </li>
+        <li class="tool-bar__item">
+          <button class="tool-bar__button tool-bar__button--color" id="color"></button>
+        </li>
+        <li class="tool-bar__item">
+          <button class="tool-bar__button tool-bar__button--move" id="move"></button>
+        </li>
+        <li class="tool-bar__item">
+          <button class="tool-bar__button tool-bar__button--transform" id="transform"></button>
+        </li>
+      </ul>
+      <ul class="menu__color-bar color-bar">
+        <li class="color-bar__item">
+          <span class="color-bar__img"></span>
+          <span class="color-bar__color"></span> 
+        </li>
+        <li class="color-bar__item color-bar__item--border-bottom">
+            <span class="color-bar__img"></span>
+            <span class="color-bar__color"></span>
+        </li>
+        <li class="color-bar__item">
+            <span class="color-bar__img color-bar__img--red"></span>  
+            <span class="color-bar__color"></span>
+        </li>
+        <li class="color-bar__item">
+          <span class="color-bar__img color-bar__img--blue"></span>
+          <span class="color-bar__color"></span>
+        </li>
+        <li class="color-bar__item">
+          <span class="color-bar__img color-bar__img--green"></span>
+          <span class="color-bar__color"></span>
+        </li>
+        <li class="color-bar__item">
+          <span class="color-bar__img color-bar__img--gray"></span>
+          <span class="color-bar__color"></span>
+        </li>
+      </ul>
+    </div>
+    <div class="frames pallete__frames">
+      <ul class="frames__list">
+        <li class="frames__item">
+          <div class="frame frame--active" data-index=0>
+            <p class=frame__number>1</p>
+            <canvas class="frame__canvas" width="146px" height="146px"></canvas>
+            <button class="frame__button frame__button--delete" data-action="delete">D</button>
+            <button class="frame__button frame__button--clone" data-action="clone">C</button>
+          </div>
+        </li>
+      </ul>
+      <button class="frames__button button">Add new frame</button>
+    </div>
+    <div class="palette__right-block">
+      <ul class="canvas">
+        <li class="canvas__item">
+          <div class="figure"></div>
+        </li>
+        <li class="canvas__item">
+          <div class="figure"></div>
+        </li>
+        <li class="canvas__item">
+          <div class="figure"></div>
+        </li>
+        <li class="canvas__item">
+          <div class="figure"></div>
+        </li>
+        <li class="canvas__item">
+          <div class="figure"></div>
+        </li>
+        <li class="canvas__item">
+          <div class="figure"></div>
+        </li>
+        <li class="canvas__item">
+          <div class="figure"></div>
+        </li>
+        <li class="canvas__item">
+          <div class="figure"></div>
+        </li>
+        <li class="canvas__item">
+          <div class="figure"></div>
+        </li>
+      </ul>
+    </div>
+    <div class="pallette__preview preview">
+      <canvas class="preview__canvas" width="220px" height="220px"></canvas>
+      
+      <p class="preview__range">
+        <label>FPS <br>
+          <span>1</span>
+          <input type="range" min="1" max="24" value="0">
+          <span>24</span>
+        </label>
+      </p>
+      <button id="fullscreen-button"class="button">Fullscreen</button>
+      <div class="preview__fullscreen">
+        <div>
+          <canvas class="fullscreen__canvas" width="600px" height="600px"></canvas>
+        </div>
+      </div>
+    </div>
+    <template id="frame-default">
+        <div class="frame">
+          <p class=frame__number>1</p>
+          <canvas class="frame__canvas" width="146px" height="146px"></canvas>
+          <button class="frame__button frame__button--delete" data-action="delete">D</button>
+          <button class="frame__button frame__button--clone" data-action="clone">C</button>
+        </div>
+    </template>  
+  </main>
+<script type="text/javascript" src="app.js"></script></body>
+</html>
